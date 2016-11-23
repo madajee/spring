@@ -1,0 +1,15 @@
+Hello World Example 
+
+1) Create POM file to download spring jars in spring-source-poms directory.
+2) Run mvn install.
+3) Create the HelloWorld project by running maven archetype.
+mvn archetype:generate -DgroupId=xom.helloworld.app -DartifactId=spring-hello-world -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+4) Test maven hava archetype.
+mvn package
+java -cp target/spring-hello-world-1.0-SNAPSHOT.jar xom.helloworld.app.App
+5) Clean up
+mvn clean
+6) Create HelloWorld java bean in the xom.helloworld.app folder.
+7) Create  a spring configuration file registering the helloworld bean in main/resources folder.
+8) Run the HelloWorld spring App
+java -cp /Users/home/LearnTheGame/Spring/workspace/spring/spring-source-poms/ver3/target/dependencies/*:target/spring-hello-world-1.0-SNAPSHOT.jar xom.helloworld.app.App
