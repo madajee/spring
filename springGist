@@ -1,3 +1,7 @@
+Maven Repository
+
+/Users/home/.m2/repository
+
 Hello World Example 
 
 1) Create POM file to download spring jars in spring-source-poms directory.
@@ -11,5 +15,25 @@ java -cp target/spring-hello-world-1.0-SNAPSHOT.jar xom.helloworld.app.App
 mvn clean
 6) Create HelloWorld java bean in the xom.helloworld.app folder.
 7) Create  a spring configuration file registering the helloworld bean in main/resources folder.
-8) Run the HelloWorld spring App
+8) Run the HelloWorld spring App from the spring-hello-world directory.
 java -cp /Users/home/LearnTheGame/Spring/workspace/spring/spring-source-poms/ver3/target/dependencies/*:target/spring-hello-world-1.0-SNAPSHOT.jar xom.helloworld.app.App
+
+
+**********************************************************************************************
+
+Restful WebService
+
+1) Create POM file to download spring jars in spring-source-poms/springboot directory.
+2) Run mvn install.
+3) Create the spring-rest-service project by running maven archetype.
+mvn archetype:generate -DgroupId=xom.restservice.app -DartifactId=spring-rest-service -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+4) Test maven hava archetype.
+mvn package
+java -cp target/spring-rest-service-1.0-SNAPSHOT.jar xom.restservice.app.App
+5) Clean up
+mvn clean
+6) Use @SpringBootApplication and @RestController to create java classes.
+7) Run mvn package in the spring-rest-service directory
+8) Run the application with the following command.
+java -cp /Users/home/LearnTheGame/Spring/workspace/spring/spring-source-poms/springboot/target/dependencies/*:target/spring-rest-service-1.0-SNAPSHOT.jar xom.restservice.app.App
+
