@@ -37,3 +37,14 @@ mvn clean
 8) Run the application with the following command.
 java -cp /Users/home/LearnTheGame/Spring/workspace/spring/spring-source-poms/springboot/target/dependencies/*:target/spring-rest-service-1.0-SNAPSHOT.jar xom.restservice.app.App
 
+**********************************************************************************************
+
+Spring Testing Web
+
+1) Create a directory
+mkdir spring-testing-web
+2) Create a pom.xml specifying spring boot starter web and spring boot starter test dependency.
+3) Create a controller class using @Controller & @RequestMapping annotations
+4) Create a standalone application jar with main method using @springbootapplication annotations.
+5) Run the application using the following command.
+mvn spring-boot:run
