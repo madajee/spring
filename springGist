@@ -48,3 +48,7 @@ mkdir spring-testing-web
 4) Create a standalone application jar with main method using @springbootapplication annotations.
 5) Run the application using the following command.
 mvn spring-boot:run
+
+Test a particular java test
+
+mvn test -Dtest=ApplicationTest
