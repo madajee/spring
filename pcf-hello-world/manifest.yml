@@ -1,0 +1,7 @@
+---
+applications:
+- name: pcf-hello-world
+  memory: 512M
+  instances: 1
+  buildpack: java_buildpack
+  random-route: true

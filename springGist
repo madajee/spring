@@ -37,7 +37,7 @@ mvn clean
 8) Run the application with the following command.
 java -cp /Users/home/LearnTheGame/Spring/workspace/spring/spring-source-poms/springboot/target/dependencies/*:target/spring-rest-service-1.0-SNAPSHOT.jar xom.restservice.app.App
 
-**********************************************************************************************
+*************************************************************************************
 
 Spring Testing Web
 
@@ -52,3 +52,25 @@ mvn spring-boot:run
 Test a particular java test
 
 mvn test -Dtest=ApplicationTest
+
+*************************************************************************************
+
+pcf-hello-wrold
+
+1) Create a directory
+mkdir pcf-hello-world
+
+2) Build the app
+mvn package
+
+3) Run the app locally
+java -jar ./target/pcf-hello-world-0.1.0.jar
+
+4) Add the deployment script for pcf
+manifest.yml
+
+5) Push app to cloud foundry
+cf push -p ./target/pcf-hello-world-0.1.0.jar
+
+
+

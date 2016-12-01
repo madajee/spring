@@ -2,3 +2,4 @@ spring-source-poms/*/target
 spring-hello-world/target
 spring-rest-service/target
 spring-testing-web/target
+pcf-hello-world/target
