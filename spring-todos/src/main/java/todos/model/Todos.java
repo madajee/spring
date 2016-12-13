@@ -16,13 +16,12 @@ public class Todos {
 	private String completed;
 
 	public Todos() {}
-	public Todos(String id){ this.id = id;}
 
 	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId() {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
@@ -30,7 +29,7 @@ public class Todos {
 		return title;
 	}
 
-	public void setTitle() {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
@@ -38,7 +37,7 @@ public class Todos {
 		return id;
 	}
 
-	public void setId() {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -46,7 +45,7 @@ public class Todos {
 		return completed;
 	}
 
-	public void setCompleted() {
+	public void setCompleted(String completed) {
 		this.completed = completed;
 	}
 

@@ -49,7 +49,7 @@ public class Application {
     	
     	for (Todos todo: todolist){
 			repository.save(todo);
-			log.info(todo.toString());
+			//log.info(todo.toString());
 		}
     	return null;
     }
