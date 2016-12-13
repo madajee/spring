@@ -1,0 +1,24 @@
+/* Spring Boot Seed Gist */
+
+- Objective: To provide a quick setup for Spring Boot Seed along with basic concepts.
+
+- Pre-requsite
+1) Install Git
+2) Install Maven
+
+- Run
+1) git clone https://github.com/madajee/spring-seed.git
+2) cp -R /spring-seed/spring-boot-seed /spring-todos
+3) Change package from demo to todos
+3) mvn compile
+4) mvn test
+5) mvn package
+6) java -jar target/spring-todos-0.1.0.jar
+7) Look for ********Hello Spring Boot Seed******
+8) mvn clean
+
+- Understanding
+1) @Component marks the class as bean and can be injected using @Autowired.
+2) RestTemplate - Spring Rest Client, can subsitute Apache Httpclient as it provides more methods etc.
+3) JPA CrudRepository interface for todos pojo.
+4) 
