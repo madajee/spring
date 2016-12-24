@@ -6,6 +6,12 @@
 1) Install Git
 2) Install Maven
 
+- Overview
+1) Application will download the Todo from the Json Placeholder todos api. (PlaceHolderTodos.java)
+2) Downloaded Todos will be stored in the H2 Database Repository using the spring repository interface. (Todos.java, TodosRepository.java)
+3) Jackson Mapping ObjectMapper provides Json to object mapping & vice-versa.
+4) 
+
 - Run
 1) git clone https://github.com/madajee/spring-seed.git
 2) cp -R /spring-seed/spring-boot-seed /spring-todos
@@ -21,4 +27,14 @@
 1) @Component marks the class as bean and can be injected using @Autowired.
 2) RestTemplate - Spring Rest Client, can subsitute Apache Httpclient as it provides more methods etc.
 3) JPA CrudRepository interface for todos pojo.
-4) 
+4) Endpoint Exception Handling uses @ControllerAdvice and makes TodosControllerExceptionHandler.java makes the global application handler.
+5) Custom exceptions thrown from the controller are handled by methods annotated with " @ExceptionHandler" and appropriate status & boby is returned to the client using @ResponseStatus and @ResponseBody.
+6) 
+
+- Testing
+1) WebApplication Context - MockMvcBuilders.webAppContextSetup(webApplicationContext).build()
+2) Standalone - MockMvcBuilders.standaloneSetup(controller).build() 
+
+Misc Commands
+
+1) mvn test -Dtest=TodosControllerTest.java

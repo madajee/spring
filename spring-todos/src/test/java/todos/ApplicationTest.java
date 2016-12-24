@@ -16,7 +16,7 @@ public class ApplicationTest {
 	@Autowired
     private ApplicationContext applicationContext;
 
-       @Test
+    @Test
     public void testContext() {
         Assert.assertNotNull(applicationContext);
     }

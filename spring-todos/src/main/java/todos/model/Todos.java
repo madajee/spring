@@ -17,6 +17,13 @@ public class Todos {
 
 	public Todos() {}
 
+	public Todos(String id, String userId, String title, String completed) {
+		this.id = id;
+		this.userId = userId;
+		this.title = title;
+		this.completed = completed;
+	}
+
 	public String getUserId() {
 		return userId;
 	}
