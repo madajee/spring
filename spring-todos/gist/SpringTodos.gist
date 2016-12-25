@@ -29,11 +29,17 @@
 3) JPA CrudRepository interface for todos pojo.
 4) Endpoint Exception Handling uses @ControllerAdvice and makes TodosControllerExceptionHandler.java makes the global application handler.
 5) Custom exceptions thrown from the controller are handled by methods annotated with " @ExceptionHandler" and appropriate status & boby is returned to the client using @ResponseStatus and @ResponseBody.
-6) 
 
 - Testing
 1) WebApplication Context - MockMvcBuilders.webAppContextSetup(webApplicationContext).build()
-2) Standalone - MockMvcBuilders.standaloneSetup(controller).build() 
+2) Standalone - MockMvcBuilders.standaloneSetup(controller).build()
+
+- Docker
+1) Add the Maven Plugin to the maven configuration file (pom.xml).
+2) Add the DockerFile in src/main/docker
+3) mvn package docker:build
+4) docker run -p 8080:8080 -t madajeeblog/spring-todos
+5) Use Docker commands (docker ps, docker images, docker stop, docker rm, docker rmi, docker ps -a) 
 
 Misc Commands
 
