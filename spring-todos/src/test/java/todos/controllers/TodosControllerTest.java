@@ -20,6 +20,11 @@ import org.springframework.http.ResponseEntity;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
+import org.apache.commons.codec.binary.Base64;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class TodosControllerTest{
@@ -48,6 +53,17 @@ public class TodosControllerTest{
 
 	}
 
+     /*
+     * Add HTTP Authorization header, using Basic-Authentication to send user-credentials.
+     */
+    private static HttpHeaders getHeaders(){
+        String plainCredentials="bill:abc123";
+        String base64Credentials = new String(Base64.encodeBase64(plainCredentials.getBytes()));
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Basic " + base64Credentials);
+        return headers;
+    }
 
 	@Test
     public void contextLoads() throws Exception {
@@ -59,9 +75,14 @@ public class TodosControllerTest{
     public void testGetTodoById() throws Exception {
 
 
-    	ResponseEntity<String> response = restTemplate.getForEntity(base.toString(), String.class);  
-    	assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));
-    	assertThat(response.getBody()).contains("userId1");
+    	//ResponseEntity<String> response = restTemplate.getForEntity(base.toString(), String.class);  
+    	//assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));
+    	//assertThat(response.getBody()).contains("userId1");
+
+        HttpEntity<String> request = new HttpEntity<String>(getHeaders());
+        ResponseEntity<String> response = restTemplate.exchange(base.toString(), HttpMethod.GET, request, String.class);
+        assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));
+        assertThat(response.getBody()).contains("userId1");
     }
 
 
