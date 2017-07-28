@@ -18,7 +18,7 @@ public class OrganizationController {
 	@Autowired
 	private OrganizationService organizationService;
 
-	@RequestMapping
+	@RequestMapping("/jstlsql")
 	public String listOrganizationUsingSQLTag() {
 		return "listOrganization1";
 	}

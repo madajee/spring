@@ -8,3 +8,8 @@ spring-boot-seed/target
 spring-relational-data-access/target
 spring-todos/target
 WIP/spring-tutorial--john-web-50/target
+XmlBasedSpringAppSeedProject/target
+/*/.classpath
+/*/.project
+/*/.settings
+/*/target
