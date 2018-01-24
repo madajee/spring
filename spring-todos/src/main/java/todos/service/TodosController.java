@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 @RestController
 public class TodosController {
 
@@ -45,4 +48,19 @@ public class TodosController {
   
         return todo;
     }
+
+    @RequestMapping(value = "/todos/{id}", method = RequestMethod.POST)
+    @ResponseBody
+    public Todos updateTodos(@PathVariable("id") String id, @RequestBody Todos todo) {
+
+        
+        //logger.debug("I am in the controller and got ID: " + id.toString());
+        //logger.debug("I am in the controller and got user name: " + todo.toString());
+
+        Todos todo1 = new Todos ("1","userId1","title1","false");
+
+        return todo1;
+    }
+
+
 }
