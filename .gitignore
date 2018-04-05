@@ -9,6 +9,7 @@ spring-relational-data-access/target
 spring-todos/target
 WIP/spring-tutorial--john-web-50/target
 XmlBasedSpringAppSeedProject/target
+cashregister/target
 /*/.classpath
 /*/.project
 /*/.settings

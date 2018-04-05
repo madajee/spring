@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	
+	<bean id="accountRepository" class="org.learnspring.cashregister.repository.JdbcAccountRepositoryImpl">
+		<constructor-arg  ref="dataSource"/>
+	</bean> 
+	
+	<bean id="transactionRepository" class="org.learnspring.cashregister.repository.JdbcTransactionRepositoryImpl">
+		<constructor-arg  ref="dataSource"/>
+	</bean> 
+	
+	<bean id="accountService" class="org.learnspring.cashregister.service.AccountServiceImpl">
+		<property name="accountRepository" ref="accountRepository"></property>
+	</bean>
+	
+	<bean id="receiptService" class="org.learnspring.cashregister.service.ReceiptServiceImpl">
+		<property name="transactionRepository" ref="transactionRepository"></property>
+	</bean>
+</beans>
